@@ -1,0 +1,28 @@
+Tolong bangun sebuah aplikasi web portofolio full-stack yang fungsional dan saling terintegrasi secara utuh. Saya telah menyediakan struktur direktori yang berisi referensi UI/UX (file code.html dan screen.png) serta panduan desain sistem (DESIGN.md).
+
+Berikut adalah spesifikasi dan persyaratan sistemnya:
+
+1. ARSITEKTUR & TECH STACK:
+- Framework: Gunakan kerangka kerja yang paling optimal dan direkomendasikan untuk di-deploy ke Vercel (misalnya Next.js dengan App Router, React, dan Tailwind CSS).
+- Database: Gunakan Neon PostgreSQL. Buatkan juga konfigurasi koneksi database dan skema/ORM (seperti Prisma atau Drizzle) untuk mengelola data portofolio.
+- Deployment: Pastikan struktur kode production-ready dan siap di-deploy ke Vercel tanpa kendala konfigurasi.
+
+2. REFERENSI UI & DESAIN:
+- Baca dan terapkan aturan gaya, warna, dan komponen dari file `premium_saas_sys.../DESIGN.md`.
+- Replikasi antarmuka pengguna (UI) setepat mungkin berdasarkan file `code.html` dan `screen.png` yang ada di masing-masing folder berikut:
+  - `portfolio_landing_...` (Halaman utama untuk publik)
+  - `admin_login` (Halaman otentikasi)
+  - `admin_dashboard` (Pusat ringkasan admin)
+  - `admin_kelola_proy...` (Daftar tabel/grid proyek)
+  - `admin_tambah_ed...` (Formulir input data proyek)
+
+3. FUNGSIONALITAS & INTEGRASI SISTEM:
+- Routing: Hubungkan semua halaman dengan sistem navigasi yang mulus. Landing page terpisah dari area admin. Area admin harus diproteksi dengan otentikasi (bermula dari admin_login).
+- Autentikasi: Buat sistem login yang mengamankan rute dashboard admin.
+- CRUD Database (Neon PostgreSQL):
+  - Halaman `admin_tambah_ed...` harus bisa melakukan aksi CREATE dan UPDATE data proyek ke database.
+  - Halaman `admin_kelola_proy...` harus bisa melakukan aksi READ (menampilkan daftar proyek dari database) dan DELETE.
+  - Halaman `portfolio_landing_...` harus mengambil dan menampilkan data proyek secara dinamis langsung dari database, BUKAN dari data statis/mockup.
+  
+4. INSTRUKSI EKSEKUSI:
+Tuliskan seluruh kode yang dibutuhkan (frontend, backend API routes, skema database) agar sistem ini langsung bisa dijalankan (npm run dev) dan semua fitur menyambung dengan sempurna. Berikan juga instruksi variabel lingkungan (.env) apa saja yang perlu saya siapkan untuk Vercel dan Neon DB.
